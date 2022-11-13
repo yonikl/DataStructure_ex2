@@ -1,29 +1,16 @@
 
 #ifndef DATASTRUCTURE_EX2_HASHTABLE_H
 #define DATASTRUCTURE_EX2_HASHTABLE_H
-
-
 #include <iostream>
 #include <string>
 using namespace std;
+#include "Item.h"
+
 
 template <class T,class K>
 class HashTable
 {
 protected:
-
-    enum state {empty, full, deleted};
-    template <class T,class K>
-    class Item
-    {
-    public:
-        T data;
-        K key;
-        state flag;
-        Item(){}
-        Item(T d, K k, state f){ data=d; key=k; flag=f;}
-    };
-
 
     int size;
     Item<T,K>* arr;

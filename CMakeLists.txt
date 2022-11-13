@@ -10,4 +10,5 @@ add_executable(DataStructure_ex2
         HashTable.h
         HSubject.cpp
         HSubject.h
-        main.cpp)
+        main.cpp
+        Item.h)
