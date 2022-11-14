@@ -75,8 +75,8 @@ void HashTable<T, K>::add(K &key, T &dat) {
                 return;
             }
         }
-
-
+    }else{
+        arr[i].data = dat;
     }
 }
 
