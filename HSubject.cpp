@@ -8,6 +8,8 @@ void HSubject::printS(string ky) {
         for(const auto& t : arr[i].data) cout << t << " ";
         cout << endl;
         return;
+    } else {
+        cout << "ERROR" <<endl;
     }
 }
 
@@ -16,7 +18,7 @@ void HSubject::printN(string ky, int N) {
 
     if(i != -1){
         int j = 0;
-        for(auto t : arr[i].data){
+        for(const auto& t : arr[i].data){
             if(j >= N) break;
             cout << t << " ";
             j++;
@@ -36,7 +38,7 @@ void HSubject::print() {
     }
     newList.sort();
     cout << "All subjects and titles:" << endl;
-    for(auto t : newList){
+    for(const auto& t : newList){
         cout << t.key << ": ";
         for (auto r : t.data) {
             cout << r << " ";
@@ -53,7 +55,6 @@ void HSubject::startNewTable() {
 
 void HSubject::addSubjectAndTitle(string s, string t) {
     int i = search(s);
-
     if(i != -1){
         arr[i].data.push_front(t);
         return;

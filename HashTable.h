@@ -53,7 +53,7 @@ HashTable<T, K>::HashTable(int m) {
 
 template<class T, class K>
 HashTable<T, K>::~HashTable() {
-    delete arr;
+    delete[] arr;
 }
 
 template<class T, class K>
@@ -86,7 +86,7 @@ int HashTable<T, K>::search(K key) {
     {
         int j = hash(key,i);
         if(arr[j].flag == full && arr[j].key == key)
-            return i;
+            return j;
     }
     return -1;
 }

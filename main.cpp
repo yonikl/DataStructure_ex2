@@ -53,3 +53,39 @@ int main()
     } while (ch != 'e');
     return 0;
 }
+/*
+n
+a
+Winter Umbrella
+a
+Winter Coat
+a
+Winter Clouds
+a
+Winter Rain
+a
+Winter Snow
+a
+Summer Sun
+a
+Summer Beach
+a
+Summer Hot
+a
+Fall Shalechet
+p
+d
+Fall
+p
+t
+Winter
+d
+Winter
+t
+Winter
+p
+e
+
+
+
+ */
