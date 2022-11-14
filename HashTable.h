@@ -58,16 +58,25 @@ HashTable<T, K>::~HashTable() {
 
 template<class T, class K>
 int HashTable<T, K>::hash(K key, int i) {
-    return h1(key) + i*h2(key);
+    return (h1(key) + i*h2(key)) % size;
 }
 
 template<class T, class K>
 void HashTable<T, K>::add(K &key, T &dat) {
     int i = search(key);
-    if(i != -1){
-        arr[i].data = dat;
-        arr[i].key = key;
-        arr[i].flag = full;
+    if(i == -1){
+        for(i = 0; i < size; i++)
+        {
+            int j = hash(key,i);
+            if(!(arr[j].flag == full)) {
+                arr[j].data = dat;
+                arr[j].key = key;
+                arr[j].flag = full;
+                return;
+            }
+        }
+
+
     }
 }
 
@@ -76,7 +85,7 @@ int HashTable<T, K>::search(K key) {
     for(int i = 0; i < size; i++)
     {
         int j = hash(key,i);
-        if(j < size && arr[j].flag == full && arr[j].key == key)
+        if(arr[j].flag == full && arr[j].key == key)
             return i;
     }
     return -1;
@@ -90,10 +99,11 @@ void HashTable<T, K>::remove(K key) {
 
 template<class T, class K>
 void HashTable<T, K>::print() {
+    cout<<size<<endl;
     for(int i = 0; i < size; i++)
     {
         if(arr[i].flag == full)
-            cout<<arr[i].data<<" ";
+            cout<<i<<":"<<arr[i].data<<" ";
     }
     cout<<endl;
 }

@@ -14,6 +14,30 @@ public:
     state flag;
     Item(){}
     Item(T d, K k, state f){ data=d; key=k; flag=f;}
+
+    bool operator==(const Item &rhs) const {
+        return key == rhs.key;
+    }
+
+    bool operator!=(const Item &rhs) const {
+        return !(rhs == *this);
+    }
+
+    bool operator<(const Item &rhs) const {
+        return key < rhs.key;
+    }
+
+    bool operator>(const Item &rhs) const {
+        return rhs < *this;
+    }
+
+    bool operator<=(const Item &rhs) const {
+        return !(rhs < *this);
+    }
+
+    bool operator>=(const Item &rhs) const {
+        return !(*this < rhs);
+    }
 };
 
 

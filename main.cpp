@@ -1,9 +1,18 @@
 using namespace std;
 #include <iostream>
 #include "HSubject.h"
+#include "HashInt.h"
 
 int main()
 {
+//    HashInt hash(12);
+//    int arr[20] = {12,34,25,45,75,24,86,45,79,67,23,64,135,643,234,647,246,242,75,96};
+//    for(int i = 0; i <=9; i++ ) {
+//        hash.add(arr[2*i], arr[2*i+1]);
+//        hash.print();
+//    }
+//    hash.print();
+
     char ch;
     int n;
     HSubject hs(1000);

@@ -10,4 +10,4 @@ add_executable(DataStructure_ex2
         HSubject.cpp
         HSubject.h
         main.cpp
-        Item.h)
+        Item.h HashInt.cpp HashInt.h)
