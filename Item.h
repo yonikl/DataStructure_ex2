@@ -1,6 +1,6 @@
-//
-// Created by 97253 on 13/11/2022.
-//
+/*
+ class Item a generic class defines two objects
+ */
 
 #ifndef DATASTRUCTURE_EX2_ITEM_H
 #define DATASTRUCTURE_EX2_ITEM_H
@@ -11,10 +11,11 @@ class Item {
 public:
     T data;
     K key;
-    state flag;
-    Item(){}
-    Item(T d, K k, state f){ data=d; key=k; flag=f;}
+    state flag;//enum
+    Item(){}//empty constructor
+    Item(T d, K k, state f){ data=d; key=k; flag=f;}//constructor
 
+    //operators
     bool operator==(const Item &rhs) const {
         return key == rhs.key;
     }

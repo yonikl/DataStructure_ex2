@@ -1,18 +1,15 @@
+/*
+Name: Raz Leibovitch
+ Id:209521863
+ Name: Yonatan Klein
+ Id: 322961764
+ */
 using namespace std;
 #include <iostream>
 #include "HSubject.h"
-#include "HashInt.h"
 
 int main()
 {
-//    HashInt hash(12);
-//    int arr[20] = {12,34,25,45,75,24,86,45,79,67,23,64,135,643,234,647,246,242,75,96};
-//    for(int i = 0; i <=9; i++ ) {
-//        hash.add(arr[2*i], arr[2*i+1]);
-//        hash.print();
-//    }
-//    hash.print();
-
     char ch;
     int n;
     HSubject hs(1000);
@@ -54,38 +51,58 @@ int main()
     return 0;
 }
 /*
+Hash Table
+
+Choose one of the following
+n: New hash table
+a: Add a subject and a title
+d: Del a subject
+t: print all titles of the subject
+s: print N first appearances of a subect
+p: print all non-empty entries
+e: Exit
 n
 a
-Winter Umbrella
+Enter a subject and a title
+subject1 title1
 a
-Winter Coat
+Enter a subject and a title
+subject1 title2
 a
-Winter Clouds
+Enter a subject and a title
+subject1 title3
 a
-Winter Rain
+Enter a subject and a title
+subject2 title2
 a
-Winter Snow
-a
-Summer Sun
-a
-Summer Beach
-a
-Summer Hot
-a
-Fall Shalechet
-p
-d
-Fall
-p
+Enter a subject and a title
+subject1 title4
 t
-Winter
-d
-Winter
-t
-Winter
+enter subject to print
+subject2
+Subject subject2 1 topics:
+title2
+s
+enter a subject and N
+subject2 3
+title2
 p
+All subjects and titles:
+subject1: title4 title3 title2 title1
+subject2: title2
+d
+Enter a subject to remove
+subject1
+p
+All subjects and titles:
+subject2: title2
+d
+Enter a subject to remove
+subject3
+t
+enter subject to print
+subject3
+ERROR
 e
-
-
-
+bye
  */
